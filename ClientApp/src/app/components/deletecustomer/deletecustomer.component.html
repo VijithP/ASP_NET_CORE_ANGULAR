@@ -1,0 +1,16 @@
+<div class="card text-center">
+    <div class="card-header">
+     Delete Customer
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> Name - {{customerDetails.name}}</h5>
+      <h3 class="card-title"> Address - {{customerDetails.address}}</h3>
+      <p class="card-text"> DOB - {{customerDetails.dob | date:'fullDate'}}</p>
+      <a href="#" class="btn btn-primary" [routerLink]="['/customer']" > Go Back</a>
+      <a href="#" class="btn btn-primary" (click)="deleteCustomer(customerDetails.customerID)" > Approve</a>
+
+    </div>
+    <div class="card-footer text-muted">
+      www.drl.com
+    </div>
+  </div>

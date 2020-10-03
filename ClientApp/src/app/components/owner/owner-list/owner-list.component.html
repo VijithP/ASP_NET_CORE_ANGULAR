@@ -1,0 +1,34 @@
+<p>owner-list works!</p>
+<table class="table"> 
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Emp Id</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of transactionList">
+            <td>{{item.transactionID}}</td>
+            <td>{{item.empID}}</td>
+            <td>{{item.amount}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<button (click)="homescore()">Home Score</button>
+
+
+<ul>
+    <li *ngFor="let item of game$ | async">{{item.home}}</li>
+</ul>
+
+
+<!-- 
+{{games | json}} -->
+<!-- <ul>
+    <li *ngFor="let item of game$ | async">
+        {{item.home}}
+    </li>
+</ul> -->

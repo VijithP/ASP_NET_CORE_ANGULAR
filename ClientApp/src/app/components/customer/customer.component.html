@@ -1,0 +1,27 @@
+<p>Customer Details</p>
+<table class='table table-striped' aria-labelledby="tableLabel" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customerItem of customerList">
+            <td>{{customerItem.name}}</td>
+            <td>{{customerItem.address}}</td>
+            <td>{{customerItem.gender}}</td>
+            <td>{{customerItem.dob | date :'short'}}</td>
+            <td>
+
+                <button class="btn btn-sm btn-light" (click)="showCustomer(customerItem.customerID)">Show</button>
+                <button class="btn btn-sm btn-info" (click)="editCustomer(customerItem.customerID)"> Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteCustomer(customerItem.customerID)"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
